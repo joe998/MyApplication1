@@ -35,6 +35,22 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        final Button JoeButton = (Button) findViewById(R.id.JoeButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("Potato")
+                        .setMessage("I added a button!")
+                        .setPositiveButton(android.R.string.ok,new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        })
+                        .show();
+            }
+        });
+
     }
 
 
